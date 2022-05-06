@@ -62,24 +62,26 @@ for id, line in enumerate(open(f"{os.path.dirname(os.path.abspath(__file__))}/{f
             print("Success!")
         
         elif r.status_code == 429:
-            
+
             print("\nYou have exceed the 1000 words limit, exiting program with completed words so far...\n")
 
             break
 
         else:
             errorlist.append(id+1)
-            print(f"There was a problem calling Oxford API. Status code is {r.status_code}. The problem is with line {id+1}.")
+            print(f"\nThere was a problem calling Oxford API. Status code is {r.status_code}. The problem is with line {id+1}.")
+            print("Possibly invalid word or multiple words not connected with dashes")
+            print("Refer to HTTP documentations for more information.\n")
 
     except:
         numberOfErrors += 1
         errorlist.append(id+1)
 
         if numberOfErrors == 1:
-            print(f"{numberOfErrors} error")
+            print(f"{numberOfErrors} unknown error found")
 
         else:
-            print(f"{numberOfErrors} errors")
+            print(f"{numberOfErrors} unknown errors found")
         
         continue
 
@@ -105,6 +107,7 @@ try:
 
     print("\n")
     print(f"The process has finished with {numberOfErrors} errors.")
+    print("Please mind the JSON residual mess.")
     print("\n")
 
 except:
