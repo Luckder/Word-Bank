@@ -20,7 +20,7 @@ print("\nHello! This program will create a Microsoft Excel Sheet to store all in
 print("It uses the public API of Oxford Dictionary.\n")
 print("Before you may continue, please get yourself an API ID and an API key.\n")
 print("You can get them here: " + "https://developer.oxforddictionaries.com/")
-print("\nNOTE: For the free plan, a limit of 1000 words is imposed; once reached, please get a new API ID.")
+print("\nNOTE: For the free plan, a limit of 1000 words is imposed; once reached, please get a new API ID and Key.")
 
 print("\n\n")
 
