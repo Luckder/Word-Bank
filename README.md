@@ -12,3 +12,5 @@ Unsure whether the differences between American English and British English will
 Borrowed english words are still okay.
 And lastly, please don't make any spelling mistakes! The API will be unable to find the word and you will get an error or even worse the wrong definition!
 
+There will be some JSON residual leftovers in the excel spreadsheet as of now, still working on it to make a cleaner spreadsheet.
+
