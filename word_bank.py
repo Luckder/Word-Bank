@@ -91,10 +91,10 @@ try:
 
     newdf = pd.concat(dflist, names=['word'], keys=[*wordlist])
 
-    pd.DataFrame(newdf).to_excel("C:/Users/david/OneDrive - Raffles Institution/Documents/wordbank/wordbank.xlsx")
+    pd.DataFrame(newdf).to_excel(f"{os.path.dirname(os.path.abspath(__file__))}/wordbank.xlsx")
 
     excel = win32.gencache.EnsureDispatch('Excel.Application')
-    wb = excel.Workbooks.Open("C:/Users/david/OneDrive - Raffles Institution/Documents/wordbank/wordbank.xlsx")
+    wb = excel.Workbooks.Open(f"{os.path.dirname(os.path.abspath(__file__))}/wordbank.xlsx")
     ws = wb.Worksheets("Sheet1")
     ws.Columns.AutoFit()
     wb.Save()
